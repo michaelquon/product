@@ -1,0 +1,13 @@
+
+<div style="width: 100%">
+  <h5 class="card-title">Product List</h5>
+</div>
+<div class="card" style="width: 15rem;" *ngFor="let i of products">
+  <ul class="list-group list-group-flush"  >
+    <li><img [src]="invalidPath" onError="this.src='http://mp3bytes.com/assets/images/empty.png'" style="height: 10rem; width:15rem;" class="card-img-top" src="{{i.imageurl}}"></li>
+    <li class="list-group-item">Title:&nbsp;{{i.title}}</li>
+    <li class="list-group-item">Price:&nbsp;${{i.price}}</li>
+    <button type="button" (click)="updateProduct(i['_id'])" class="btn btn-primary">Edit</button>
+    <button (click)="deleteProduct( i['_id'])" type="button" class="btn btn-danger">Delete</button>
+  </ul>
+</div>

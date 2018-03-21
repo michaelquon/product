@@ -1,0 +1,23 @@
+<div class="card" style="width: 30rem;">
+    <div class="card-body">
+      <h5 class="card-title">Edit Product</h5>
+      <form (submit)="addProduct(productName._id)">
+          <div class="form-group">
+              <label for="">Title<span id="error">{{error}}</span></label>
+              <input [(ngModel)]="productName.title" name="title" type="text" class="form-control" id="title" >
+            </div>
+            <div class="form-group">
+              <label for="">Price</label>
+              <input [(ngModel)]="productName.price" name="price" type="number" class="form-control" id="price">
+            </div>
+        <div class="form-group">
+            <label for="">Image url</label>
+            <input [(ngModel)]="productName.imageurl" name="imageurl" type="url" class="form-control" id="image">
+        </div>
+        <div class="btn-style">
+      <button type="submit" class="btn btn-primary">Update</button>
+      <button ((click)="deleteProduct( i['_id'])" type="button" class="btn btn-danger">Delete</button>
+    </div>
+      </form>
+    </div>
+  </div>

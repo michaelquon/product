@@ -1,0 +1,11 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div>
+  <h1>{{ title }}</h1>
+</div>
+
+<div id="main-box">
+<button class="btn btn-primary btn" [routerLink]="['home']" skipLocationChange>Home</button>
+<button class="btn btn-primary btn" [routerLink]="['list']" skipLocationChange>Product List</button>
+<button class="btn btn-primary btn" [routerLink]="['create']" skipLocationChange>Product Creation</button>
+</div>
+<router-outlet></router-outlet>

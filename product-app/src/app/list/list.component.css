@@ -1,0 +1,13 @@
+.card, .card-title{
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 20px;
+    margin-left: 1.5rem;
+}
+ul li{
+    list-style: none;
+    text-align: center;
+}
+.btn-style{
+    text-align: center;
+    }
