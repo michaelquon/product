@@ -14,7 +14,7 @@ const port = 8000;
 const mongoose =require('mongoose');
 mongoose.Promise = global.Promise;
 mongoose.connect('mongodb://localhost/product');
-app.use(express.static(__dirname+ '/product-app/dist'));
+app.use(express.static(path.join(__dirname+ '/product-app/dist')));
 //Setup Schema
 
 
@@ -90,10 +90,10 @@ const ProductSchema = new mongoose.Schema({
         
         })
     
-        app.all("*", (req,res,next) => {
-            res.sendFile(path.resolve("./product-app/dist/index.html"))
-          });
     })
+    app.all("*", (req,res,next) => {
+        res.sendFile(path.resolve("./product-app/dist/index.html"))
+      });
 
 
 app.listen(port, ()=>{
