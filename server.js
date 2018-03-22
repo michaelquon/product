@@ -19,7 +19,7 @@ app.use(express.static(path.join(__dirname+ '/product-app/dist')));
 
 
 const ProductSchema = new mongoose.Schema({
-    title: {type: String, required: true, minlength: 4},
+    title: {type: String, required: [true, "Title requires 4 characters"], minlength: 4},
     price: {type: Number, required: true},
     imageurl: {type: String}},
     {timestamps: true
